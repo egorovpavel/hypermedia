@@ -13,7 +13,7 @@
     },
     "autoload": {
         "psr-4": {
-            "Salesengineonline\\Hypermedia\\": "/src/"
+            "Salesengineonline\\Hypermedia\\": "/src"
         }
     }
 }
