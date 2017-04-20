@@ -7,8 +7,13 @@
             "email": "pavel.egorov@salesengineonline.com"
         }
     ],
-    "minimum-stability": "dev",
+    "minimum-stability": "stable",
     "require": {
         "danielgsims/php-siren": "^0.9.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "salesengineonline/hypermedia\\": "."
+        }
     }
 }
