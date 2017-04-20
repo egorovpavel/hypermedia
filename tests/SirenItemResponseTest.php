@@ -1,10 +1,12 @@
 <?php
 
-namespace salesengineonline\hypermedia\tests;
+namespace Tests;
 
 
-use salesengineonline\hypermedia\src\SirenItemResponse;
-use salesengineonline\hypermedia\tests\fixtures\SimpleModelClass;
+
+use Salesengineonline\Hypermedia\SirenItemResponse;
+use Tests\fixtures\SimpleModelClass;
+
 
 class SirenItemResponseTest extends \PHPUnit_Framework_TestCase
 {

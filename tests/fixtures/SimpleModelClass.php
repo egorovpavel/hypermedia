@@ -1,6 +1,6 @@
 <?php
 
-namespace salesengineonline\hypermedia\tests\fixtures;
+namespace Tests\fixtures;
 
 
 class SimpleModelClass
