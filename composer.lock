@@ -1,0 +1,52 @@
+{
+    "_readme": [
+        "This file locks the dependencies of your project to a known state",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
+        "This file is @generated automatically"
+    ],
+    "hash": "9b08c543b18c96f654016b8ce5476263",
+    "content-hash": "ba9b5500725d717d60366fd3d98f2ae7",
+    "packages": [
+        {
+            "name": "danielgsims/php-siren",
+            "version": "0.9",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/danielgsims/php-siren.git",
+                "reference": "054f4355661e15a144140be587f8f63627839c47"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/danielgsims/php-siren/zipball/054f4355661e15a144140be587f8f63627839c47",
+                "reference": "054f4355661e15a144140be587f8f63627839c47",
+                "shasum": ""
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Siren\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Daniel G Sims",
+                    "email": "danielgarthsims@gmail.com"
+                }
+            ],
+            "description": "Helper to write Siren hypermedia responses",
+            "time": "2014-08-02 20:31:17"
+        }
+    ],
+    "packages-dev": [],
+    "aliases": [],
+    "minimum-stability": "dev",
+    "stability-flags": [],
+    "prefer-stable": false,
+    "prefer-lowest": false,
+    "platform": [],
+    "platform-dev": []
+}

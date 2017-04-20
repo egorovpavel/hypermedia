@@ -8,5 +8,7 @@
         }
     ],
     "minimum-stability": "dev",
-    "require": {}
+    "require": {
+        "danielgsims/php-siren": "^0.9.0"
+    }
 }
