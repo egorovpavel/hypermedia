@@ -2,6 +2,7 @@
 <phpunit backupGlobals="false"
          backupStaticAttributes="false"
          colors="true"
+         bootstrap="../../autoload.php"
          convertErrorsToExceptions="true"
          convertNoticesToExceptions="true"
          convertWarningsToExceptions="true"
@@ -14,7 +15,7 @@
     </testsuites>
     <filter>
         <whitelist processUncoveredFilesFromWhitelist="true">
-            <directory suffix=".php">./app</directory>
+            <directory suffix=".php">./src</directory>
         </whitelist>
     </filter>
 </phpunit>

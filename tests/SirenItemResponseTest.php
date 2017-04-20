@@ -3,9 +3,7 @@
 namespace Tests;
 
 
-
 use Salesengineonline\Hypermedia\SirenItemResponse;
-use Tests\fixtures\SimpleModelClass;
 
 
 class SirenItemResponseTest extends \PHPUnit_Framework_TestCase
