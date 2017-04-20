@@ -1,6 +1,6 @@
 <?php
 
-namespace salesengineonline\hypermedia;
+namespace Salesengineonline\Hypermedia;
 
 
 class SirenItemResponse implements SirenResponse
