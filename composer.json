@@ -1,0 +1,12 @@
+{
+    "name": "salesengineonline/hypermedia",
+    "description": "Set of classes and interfaces for buiding  siren hypermedia responses",
+    "authors": [
+        {
+            "name": "Pavel Egorov",
+            "email": "pavel.egorov@salesengineonline.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {}
+}
