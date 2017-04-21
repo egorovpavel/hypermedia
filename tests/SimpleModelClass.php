@@ -1,6 +1,6 @@
 <?php
 
-namespace Tests;
+namespace Salesengineonline\Hypermedia\Tests;
 
 
 use Salesengineonline\Hypermedia\ApiEntity;
