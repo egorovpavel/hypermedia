@@ -1,19 +1,21 @@
 {
-    "name": "salesengineonline/hypermedia",
-    "description": "Set of classes and interfaces for buiding  siren hypermedia responses",
-    "authors": [
-        {
-            "name": "Pavel Egorov",
-            "email": "pavel.egorov@salesengineonline.com"
-        }
-    ],
-    "minimum-stability": "stable",
-    "require": {
-        "danielgsims/php-siren": "^0.9.0"
-    },
-    "autoload": {
-        "psr-4": {
-            "Salesengineonline\\Hypermedia\\": ["/src","/tests"]
-        }
+  "name": "salesengineonline/hypermedia",
+  "description": "Set of classes and interfaces for buiding  siren hypermedia responses",
+  "authors": [
+    {
+      "name": "Pavel Egorov",
+      "email": "pavel.egorov@salesengineonline.com"
     }
-}
+  ],
+  "minimum-stability": "stable",
+  "require": {
+    "danielgsims/php-siren": "^0.9.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "Salesengineonline\\Hypermedia\\": [
+        "/src",
+        "/tests"
+      ]
+    }
+  }

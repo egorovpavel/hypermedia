@@ -1,9 +1,8 @@
 <?php
 
-namespace Tests;
+namespace Salesengineonline\Hypermedia;
 
 
-use Salesengineonline\Hypermedia\ApiEntity;
 
 class SimpleModelClass implements ApiEntity
 {
