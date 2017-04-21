@@ -1,9 +1,8 @@
 <?php
 
-namespace Salesengineonline\Hypermedia\Tests;
+namespace Salesengineonline\Hypermedia;
 
 
-use Salesengineonline\Hypermedia\SirenItemResponse;
 
 
 class SirenItemResponseTest extends \PHPUnit_Framework_TestCase
@@ -11,7 +10,8 @@ class SirenItemResponseTest extends \PHPUnit_Framework_TestCase
 
     public function testSimpleModelResponse()
     {
-        $model = new SimpleModelClass();
+        //$model = new SimpleModelClass();
+        $model = null;
         $item = new SirenItemResponse($model);
 
         $response = $item->getResponse();
