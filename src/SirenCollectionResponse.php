@@ -11,6 +11,6 @@ class SirenCollectionResponse implements SirenResponse
 
     public function getResponse()
     {
-        // TODO: Implement getResponse() method.
+        return "";
     }
 }
