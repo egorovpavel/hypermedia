@@ -13,15 +13,15 @@
     "nilportugues/api-problems": "^1.2",
     "laravel/framework": "^5.4"
   },
-  "files": [
-    "src/helpers.php"
-  ],
   "autoload": {
     "psr-4": {
       "Salesengineonline\\Hypermedia\\": [
         "/src",
         "/tests"
       ]
-    }
+    },
+    "files": [
+      "src/helpers.php"
+    ]
   }
 }
