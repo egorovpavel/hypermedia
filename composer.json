@@ -1,6 +1,6 @@
 {
   "name": "salesengineonline/hypermedia",
-  "description": "Set of classes and interfaces for buiding  siren hypermedia responses",
+  "description": "Set of classes and interfaces for building hal hypermedia responses",
   "authors": [
     {
       "name": "Pavel Egorov",
@@ -9,8 +9,13 @@
   ],
   "minimum-stability": "stable",
   "require": {
-    "danielgsims/php-siren": "^0.9.0"
+    "vlucas/hyperspan": "0.x",
+    "nilportugues/api-problems": "^1.2",
+    "laravel/framework": "^5.4"
   },
+  "files": [
+    "src/helpers.php"
+  ],
   "autoload": {
     "psr-4": {
       "Salesengineonline\\Hypermedia\\": [
