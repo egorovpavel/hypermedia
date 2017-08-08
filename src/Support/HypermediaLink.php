@@ -15,11 +15,15 @@ class HypermediaLink implements \JsonSerializable
     public $href;
     private $name;
 
-    function __construct($name,$href,$title = null)
+    function __construct($href,$title = null)
     {
-        $this->name = $name;
         $this->href = $href;
         $this->title = $title;
+    }
+
+    public function withName($name){
+        $this->name = $name;
+        return $this;
     }
 
     public function getName()
