@@ -11,7 +11,8 @@
   "require": {
     "vlucas/hyperspan": "0.x",
     "nilportugues/api-problems": "^1.2",
-    "laravel/framework": "^5.4"
+    "laravel/framework": "^5.4",
+    "guymers/php-dynamic-proxy": "^1.0"
   },
   "autoload": {
     "psr-4": {
@@ -20,8 +21,7 @@
         "/tests"
       ]
     },
-    "files": [
-      "src/helpers.php"
-    ]
-  }
+    "files": ["src/helpers.php"]
+  },
+  "files": ["src/helpers.php"]
 }

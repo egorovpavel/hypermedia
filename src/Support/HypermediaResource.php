@@ -6,6 +6,24 @@ namespace Salesengineonline\Hypermedia\src;
 use Illuminate\Support\Collection;
 use salesengineonline\hypermedia\src\Support\HypermediaLink;
 
+if (!function_exists('lnk')) {
+
+    function lnk($result)
+    {
+        dd($result);
+        return $result;
+    }
+}
+
+if (!function_exists('to')) {
+
+    function to($class)
+    {
+
+        return new $class;
+    }
+}
+
 class HypermediaResource implements \JsonSerializable
 {
     public $_links;
