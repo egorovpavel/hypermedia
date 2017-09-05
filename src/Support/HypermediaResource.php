@@ -3,26 +3,21 @@
 namespace Salesengineonline\Hypermedia\src;
 
 
-use guymers\proxy\ProxyFactory;
-use Salesengineonline\Hypermedia\src\Support\DummyInterceptor;
-use Salesengineonline\Hypermedia\src\Support\HypermediaLink;
-
+use Illuminate\Support\Facades\Request;
+use Salesengineonline\Hypermedia\src\Support\HypermediaForm;
+use Salesengineonline\Hypermedia\src\Support\HypermediaRel;
 
 
 class HypermediaResource implements \JsonSerializable
 {
-    public $_links;
-    public $_embedded;
-
-    public function __construct()
-    {
-        $this->_embedded = new \stdClass();
-        $this->_links = new \stdClass();
-    }
+    public $_links = [];
+    public $_embedded = [];
+    public $_forms = [];
 
     public function setItems($resourceName, $resourceArray)
     {
-        $this->_embedded->$resourceName = $resourceArray;
+        $rel = $resourceName;
+        $this->_embedded[$rel] = $resourceArray;
     }
 
     public function setItem(HypermediaResource $resource)
@@ -30,10 +25,42 @@ class HypermediaResource implements \JsonSerializable
         $this->_embedded = $resource;
     }
 
-    public function addRel(HypermediaLink $link)
+    public function addRel(HypermediaRel $link)
     {
         $name = $link->getName();
-        $this->_links->$name = $link;
+        $this->_links[$name] = $link;
+    }
+
+    public function addForm(HypermediaForm $form)
+    {
+        $name = $form->getName();
+        $this->_forms[$name] = $form;
+    }
+
+    public function withCuries()
+    {
+
+        $this->_links['curies'] = [
+            "name" => str_slug(config('app.name'), '_'),
+            "href" => Request::root() . '/rels/{rel}',
+            "templated" => true
+        ];
+        return $this;
+    }
+
+    public function forms()
+    {
+        return [];
+    }
+
+    public function links()
+    {
+        return [];
+    }
+
+    public function embedded()
+    {
+        return [];
     }
 
     public function __toString()
@@ -50,7 +77,14 @@ class HypermediaResource implements \JsonSerializable
      */
     function jsonSerialize()
     {
-        return array_filter((array)$this, function ($item) {
+        $this->links();
+        $this->forms();
+        $this->embedded();
+        return array_filter([
+            '_links' => $this->_links,
+            '_forms' => $this->_forms,
+            '_embedded' => $this->_embedded,
+        ], function ($item) {
             return !($item == null || empty($item) || count((array)$item) == 0);
         });
     }

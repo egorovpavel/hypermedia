@@ -9,20 +9,40 @@
 namespace Salesengineonline\Hypermedia\src\Support;
 
 
-class HypermediaLink implements \JsonSerializable
+use Illuminate\Routing\Route;
+use Illuminate\Support\Facades\Request;
+
+class HypermediaRel implements \JsonSerializable
 {
     public $title;
     public $href;
     private $name;
 
-    function __construct($href,$title = null)
+    function __construct(Route $route,$href,$title = null)
     {
-        $this->href = $href;
+        $this->href = ltrim($href,'/');
         $this->title = $title;
+
+        $this->withName($route->getName());
     }
 
     public function withName($name){
-        $this->name = $name;
+        $this->name = Request::root() . '/rels/' .$name;
+        return $this;
+    }
+
+    public function asSelf(){
+        $this->name = 'self';
+        return $this;
+    }
+
+    public function asNext(){
+        $this->name = 'next';
+        return $this;
+    }
+
+    public function asPrev(){
+        $this->name = 'prev';
         return $this;
     }
 
